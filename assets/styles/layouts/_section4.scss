@@ -1,0 +1,129 @@
+.section4{
+    padding: 50px 20px 90px;
+    color: black;
+
+
+    .section4-container{
+        max-width: 1000px;
+        margin: 0 auto;
+
+        @media screen and (max-width:680px){
+            display: none;
+         }
+        h4{
+            font-size: 2.5rem;
+            color: $color1;
+            font-family: $font1;
+            font-weight: 100;
+        }
+        h2{
+            letter-spacing: 2px;
+            font-size: 2rem;
+            color: $white;
+            margin-top: -12px;
+            font-family: $font2;
+        }
+        span{
+
+            img{
+                margin: 30px 0;
+            }
+        }
+        .event-day{
+            display: grid;
+            grid-template-columns: 58% 42%;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            grid-template-areas: 
+            "a b"
+            "c b";
+            // gap: 20px;
+
+            h6{
+                font-size: 1.7rem;
+            }
+            .date-news{
+                background: $white;
+                padding: 20px 0;
+                h3{
+                    letter-spacing: 1px;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    padding-left: 8px;
+                }
+                p{
+                   font-size: 0.7rem;
+                   color: $grey; 
+                   margin-top: 20px;
+                   letter-spacing: 1px;
+
+                   i{
+                    margin:0 3px;
+                    font-size: 0.7rem;
+                    transform: translate(-2px);
+
+                    &:nth-child(2) {
+                        margin-left: 10px;
+                    }
+                   }
+                }
+                a{
+                    letter-spacing: 2px;
+                    color: $black;
+                    margin-top: 25px;
+                    display: block;
+                    font-size: 0.9rem;
+                }
+
+            }
+
+            .event-left, .rigth-part{
+                .date {
+                    .day-month{
+                        background: $black;
+                        height: 56px;
+                        width: 56px;
+                        margin: 0 auto;
+                        color: $white;
+                        @include childCenter;
+                        flex-direction: column;
+                        line-height: 22px;
+    
+                    }
+                  
+                }
+            }
+            .event-left{
+                display: grid;
+                grid-template-columns: 39% 61%;
+            }
+
+            .left-part1{
+                grid-area: a;
+                .date{
+                    @include childCenter;
+                    background: url(../img/event-01.jpg) center/cover;
+                }
+            }
+            .left-part2{
+                grid-area: c;
+                .date{
+                    @include childCenter;
+                    background: url(../img/event-02.jpg) center/cover;
+                }
+            }
+            .rigth-part{
+                grid-area: b;
+                background: url(../img/event-03.jpg) center/cover;
+                padding: 20px;
+                .ticket-content{
+                    background: $white;
+                    height: 100%;
+
+                }
+                
+            }
+
+        }
+    }
+}

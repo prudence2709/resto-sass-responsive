@@ -1,0 +1,90 @@
+footer{
+    background-color: url(../img/bg-footer.jpg) center/cover;
+    text-align: left;
+    padding: 65px 22px;
+    color: $white;
+    @media screen and (max-width:680px){
+        background: none;
+     }
+
+    .footer-container{
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        @media screen and (max-width:680px){
+            grid-template-columns: 1fr;
+         }
+
+        .left-part{
+            padding-right: 60px;
+            line-height: 30px;
+            @media screen and (max-width:680px){
+               display: none;
+             }
+
+            h4{
+                font-family: $font1; 
+                font-size: 2.5rem;
+                font-weight: 100;
+                color: $color1;
+                margin-bottom: 15px;
+             }
+        }
+        .right-part{
+           padding-left: 50px; 
+           display: grid;
+           grid-template-rows: 1fr 1fr;
+
+           @media screen and (max-width:680px){
+           padding-left: 20px;
+         }
+
+           h3{
+            font-size: 0.85rem;
+           }
+           input{
+            margin-top: 15px;
+            background: none;
+            border: 1px solid rgba(166, 114, 69, 0.151);
+            padding: 7px 13px;
+            width: 250px;
+
+            @media screen and (max-width:680px){
+                width: 150px;
+             }
+           }
+
+           .followus{
+            display: flex;
+            align-items: center;
+            
+                h3{
+                    width: 30%;
+
+                    @media screen and (max-width:680px){
+                        display: none;
+                     }
+                }
+                .icons{
+                    width: 70%;
+                    ul{
+                    font-size: 0.8rem;
+                     @include alignChildren(space-around);
+                    
+                     i{
+                        transition: 0.5s;
+                     }
+                     :hover{
+                        cursor: pointer;
+                        transform: scale(1.2);
+                     }
+                    }
+                }
+           
+           
+           }
+        }
+       
+    }
+}

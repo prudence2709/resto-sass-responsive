@@ -1,0 +1,56 @@
+.section1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: $white;
+    color: $black;
+
+    @media screen and (max-width:680px){
+        grid-template-columns: 1fr;
+     }
+
+    .section1-left{
+        margin: 15px;
+        padding: 30px 15px;
+        border: 1px dashed $color1;
+
+      
+
+
+        h4{
+            color: $color1;
+            font-family: $font1;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        h2{
+            margin-top: -12px;
+            font-family: $font2;
+        }
+        img{
+            margin: 26px;
+        }
+        img:nth-of-type(2){
+            height: 70px;
+            margin-bottom: 8px;
+            border-radius: 150px;
+        }
+        h3{
+            font-family: $font2;
+            font-weight: 100;
+
+        }
+        h5{
+            color: $grey;
+            font-size: 0.7rem;
+        }
+    }
+
+    .section1-rigth{
+        background: url(../img/store-01.jpg) center/cover;
+
+        @media screen and (max-width:680px){
+            display: none;
+        }
+
+    }
+}

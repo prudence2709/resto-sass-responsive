@@ -1,0 +1,108 @@
+.section2{
+    color: $white;
+    padding-bottom: 100px;
+    position: relative;
+
+    &::after{
+
+        content: "";
+        position: absolute;
+        height: 620px;
+        width: 100%;
+        left: 50%;
+        background:url(../img/bg-menu-01.jpg) center/cover;
+        bottom: -330px;
+        transform: translate(-50%, -50%);
+    }
+
+    h4{
+        color: $color1;
+        font-size: 2rem;
+        font-family: $font1;
+        font-weight: 500;
+        padding: 60px 0 30px;
+    }
+    ul{
+        @include alignChildren(space-around);
+        width:50%;
+        margin:30px auto;
+        min-width: 500px;
+
+        @media screen and (max-width:680px){
+            min-width: 200px;
+            font-size: 0.65rem;
+            width: 90%;
+        }
+
+        
+        li{
+            border-bottom: 1px solid $grey;
+            padding-bottom: 8px;
+        }
+        
+    }
+
+    .menu-card{
+        background: white;
+        color: $black;
+        width: 85%;
+        margin: 0 auto;
+        max-width: 800px;
+        border-top: 4px solid $color1;
+        padding: 15px 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        z-index: 100;
+        position: relative;
+
+        @media screen and (max-width:680px){
+            grid-template-columns: 1fr;
+        }
+
+
+        .card-left > div, 
+        .card-rigth > div{
+            display: grid;
+            grid-template-columns: 25% 55% 20%;
+            align-items: center;
+            border-bottom: 1px dashed $grey;
+            padding: 30px 0;
+            margin: 0 20px;
+
+            span{
+
+                img{
+                    object-fit: cover;
+                    border-radius: 50px;
+                    width: 100%;
+                    align-self: center;
+                }
+            }
+            .text-menu{
+                text-align: left;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                margin-left:10px;
+                height: 100%;
+
+                h5{
+                    text-transform: uppercase;
+                    color: $black;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+               
+            }
+            > p{
+                color: $color1;
+                font-weight: 600;
+                // @include childCenter
+               
+                
+            }
+        }
+    }
+}
